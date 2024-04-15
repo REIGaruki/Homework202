@@ -1,7 +1,7 @@
 public class Hogwarts {
-    private String studentName;
-    private int magicPower;
-    private int apparitionDistance;
+    protected String studentName;
+    protected int magicPower;
+    protected int apparitionDistance;
 
     public Hogwarts(String studentName, int magicPower, int apparitionDistance) {
         this.magicPower = magicPower;
@@ -31,5 +31,10 @@ public class Hogwarts {
 
     public void setStudentName(String studentName) {
         this.studentName = studentName;
+    }
+    protected String printAttributes() {
+        return studentName +
+                "\nМощность колдовства: " + magicPower + " баллов" +
+                "\nРасстояние трансгрессии: " + apparitionDistance + " км";
     }
 }

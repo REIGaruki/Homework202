@@ -52,4 +52,15 @@ public class Slytherin extends Hogwarts{
     public void setPowerLust(int powerLust) {
         this.powerLust = powerLust;
     }
+
+    @Override
+    public String toString() {
+        return "Слизеринец " +
+                printAttributes() +
+                "\nХитрость: " + cunning + " баллов" +
+                "\nРешительность: " + determination + " баллов" +
+                "\nАмбициозность: " + ambition + " баллов" +
+                "\nНаходчивость: " + resource + " баллов" +
+                "\nЖажда власти: " + powerLust + " баллов";
+    }
 }

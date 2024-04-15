@@ -20,5 +20,17 @@ public class Main {
                 new Ravenclaw("Падма Патил", 48, 62, 47, 85, 37, 74),
                 new Ravenclaw("Маркус Белби", 76, 89, 87, 69, 92, 25)
         };
+        for (Ravenclaw ravenclawer: ravenclawers) {
+            System.out.println(ravenclawer);
+        }
+        for (Griffindor griffindorer: griffindorers) {
+            System.out.println(griffindorer);
+        }
+        for (Slytherin slytheriner: slytheriners) {
+            System.out.println(slytheriner);
+        }
+        for (Hufflepuff hufflepuffer: hufflepuffers) {
+            System.out.println(hufflepuffer);
+        }
     }
 }

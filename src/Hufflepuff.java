@@ -35,7 +35,7 @@ public class Hufflepuff extends Hogwarts{
     @Override
     public String toString() {
         return "Пуффендуец " +
-                printAttributes() +
+                super.toString() +
                 "\nТрудолюбие: " + hardWork + " баллов" +
                 "\nВерность: " + loyalty + " баллов" +
                 "\nЧестность: " + honesty + " баллов";

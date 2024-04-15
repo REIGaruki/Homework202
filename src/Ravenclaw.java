@@ -46,7 +46,7 @@ public class Ravenclaw extends Hogwarts{
     @Override
     public String toString() {
         return "Когтевранец " +
-                printAttributes() +
+                super.toString() +
                 "\nУм: " + intelligence + " баллов" +
                 "\nМудрость: " + wisdom + " баллов" +
                 "\nОстроумие: " + smart + " баллов" +

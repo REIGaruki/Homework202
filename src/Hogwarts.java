@@ -32,7 +32,8 @@ public abstract class Hogwarts {
     public void setStudentName(String studentName) {
         this.studentName = studentName;
     }
-    public String printAttributes() {
+    @Override
+    public String toString() {
         return studentName +
                 "\nМощность колдовства: " + magicPower + " баллов" +
                 "\nРасстояние трансгрессии: " + apparitionDistance + " км";

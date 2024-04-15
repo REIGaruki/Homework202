@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Hogwarts[] students = new Hogwarts[]{
-               new Griffindor("Гарри Поттер", 55, 20, 90, 80, 80),
+               new Griffindor("Гарри Поттер", 55, 91, 90, 80, 80),
                new Griffindor("Гермиона Грейнджер", 99, 76, 90, 60, 50),
                new Griffindor("Рон Уизли", 36, 14, 30, 100, 90),
                new Slytherin("Драко Малфой", 77, 69, 60, 70, 100, 60, 90),
@@ -21,6 +21,9 @@ public class Main {
         compariseSlytherinishness((Slytherin) students[3], (Slytherin) students[5]);
         compariseHufflepuffishness((Hufflepuff) students[7], (Hufflepuff) students[8]);
         compariseRavenclawishness((Ravenclaw) students[10], (Ravenclaw) students[11]);
+        compariseGrades(students[4], students[8]);
+        compariseGrades(students[0], students[3]);
+        compariseGrades(students[9], students[7]);
     }
     public static void compariseGriffindorishness(Griffindor student1, Griffindor student2) {
         int student1Points = student1.getHonor() + student1.getBravery() + student1.getNobility();
@@ -62,6 +65,17 @@ public class Main {
             System.out.println(student1.getStudentName() + " лучший Когтевранец чем " + student2.getStudentName());
         } else if (student1Points < student2Points) {
             System.out.println(student2.getStudentName() + " лучший Когтевранец чем " + student1.getStudentName());
+        } else {
+            System.out.println(student1.getStudentName() + " и " + student2.getStudentName() + " равны по баллам");
+        }
+    }
+    public static void compariseGrades(Hogwarts student1, Hogwarts student2) {
+        int student1Points = student1.getApparitionDistance() + student1.getMagicPower();
+        int student2Points = student2.getApparitionDistance() + student2.getMagicPower();
+        if (student1Points > student2Points) {
+            System.out.println(student1.getStudentName() + " обладает большей магической мощностью чем " + student2.getStudentName());
+        } else if (student1Points < student2Points) {
+            System.out.println(student2.getStudentName() + " обладает большей магической мощностью чем " + student1.getStudentName());
         } else {
             System.out.println(student1.getStudentName() + " и " + student2.getStudentName() + " равны по баллам");
         }

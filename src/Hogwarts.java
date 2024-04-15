@@ -1,7 +1,7 @@
-public class Hogwarts {
-    protected String studentName;
-    protected int magicPower;
-    protected int apparitionDistance;
+public abstract class Hogwarts {
+    private String studentName;
+    private int magicPower;
+    private int apparitionDistance;
 
     public Hogwarts(String studentName, int magicPower, int apparitionDistance) {
         this.magicPower = magicPower;

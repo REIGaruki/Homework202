@@ -17,15 +17,15 @@ public class Main {
         for (Hogwarts student: students) {
             System.out.println(student);
         }
-        compariseGriffindorishness((Griffindor) students[1], (Griffindor) students[2]);
-        compariseSlytherinishness((Slytherin) students[3], (Slytherin) students[5]);
-        compariseHufflepuffishness((Hufflepuff) students[7], (Hufflepuff) students[8]);
-        compariseRavenclawishness((Ravenclaw) students[10], (Ravenclaw) students[11]);
-        compariseGrades(students[4], students[8]);
-        compariseGrades(students[0], students[3]);
-        compariseGrades(students[9], students[7]);
+        compareGriffindorishness((Griffindor) students[1], (Griffindor) students[2]);
+        compareSlytherinishness((Slytherin) students[3], (Slytherin) students[5]);
+        compareHufflepuffishness((Hufflepuff) students[7], (Hufflepuff) students[8]);
+        compareRavenclawishness((Ravenclaw) students[10], (Ravenclaw) students[11]);
+        compareGrades(students[4], students[8]);
+        compareGrades(students[0], students[3]);
+        compareGrades(students[9], students[7]);
     }
-    public static void compariseGriffindorishness(Griffindor student1, Griffindor student2) {
+    public static void compareGriffindorishness(Griffindor student1, Griffindor student2) {
         int student1Points = student1.getHonor() + student1.getBravery() + student1.getNobility();
         int student2Points = student2.getHonor() + student2.getBravery() + student2.getNobility();
         if (student1Points > student2Points) {
@@ -36,7 +36,7 @@ public class Main {
             System.out.println(student1.getStudentName() + " и " + student2.getStudentName() + " равны по баллам");
         }
     }
-    public static void compariseSlytherinishness(Slytherin student1, Slytherin student2) {
+    public static void compareSlytherinishness(Slytherin student1, Slytherin student2) {
         int student1Points = student1.getAmbition() + student1.getCunning() + student1.getDetermination() + student1.getPowerLust() + student1.getResource();
         int student2Points = student2.getAmbition() + student2.getCunning() + student2.getDetermination() + student2.getPowerLust() + student2.getResource();
         if (student1Points > student2Points) {
@@ -47,7 +47,7 @@ public class Main {
             System.out.println(student1.getStudentName() + " и " + student2.getStudentName() + " равны по баллам");
         }
     }
-    public static void compariseHufflepuffishness(Hufflepuff student1, Hufflepuff student2) {
+    public static void compareHufflepuffishness(Hufflepuff student1, Hufflepuff student2) {
         int student1Points = student1.getHardWork() + student1.getHonesty() + student1.getLoyalty();
         int student2Points = student2.getHardWork() + student2.getHonesty() + student2.getLoyalty();
         if (student1Points > student2Points) {
@@ -58,9 +58,9 @@ public class Main {
             System.out.println(student1.getStudentName() + " и " + student2.getStudentName() + " равны по баллам");
         }
     }
-    public static void compariseRavenclawishness(Ravenclaw student1, Ravenclaw student2) {
+    public static void compareRavenclawishness(Ravenclaw student1, Ravenclaw student2) {
         int student1Points = student1.getCreative() + student1.getIntelligence() + student1.getSmart() + student1.getWisdom();
-        int student2Points = student2.getCreative() + student2.getIntelligence() + student2.getSmart() + student1.getWisdom();
+        int student2Points = student2.getCreative() + student2.getIntelligence() + student2.getSmart() + student2.getWisdom();
         if (student1Points > student2Points) {
             System.out.println(student1.getStudentName() + " лучший Когтевранец чем " + student2.getStudentName());
         } else if (student1Points < student2Points) {
@@ -69,7 +69,7 @@ public class Main {
             System.out.println(student1.getStudentName() + " и " + student2.getStudentName() + " равны по баллам");
         }
     }
-    public static void compariseGrades(Hogwarts student1, Hogwarts student2) {
+    public static void compareGrades(Hogwarts student1, Hogwarts student2) {
         int student1Points = student1.getApparitionDistance() + student1.getMagicPower();
         int student2Points = student2.getApparitionDistance() + student2.getMagicPower();
         if (student1Points > student2Points) {

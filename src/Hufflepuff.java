@@ -40,15 +40,18 @@ public class Hufflepuff extends Hogwarts{
                 "\nВерность: " + loyalty + " баллов" +
                 "\nЧестность: " + honesty + " баллов";
     }
-    public void compareAttributes(Hufflepuff student) {
-        int student1Points = this.getHardWork() + this.getHonesty() + this.getLoyalty();
-        int student2Points = student.getHardWork() + student.getHonesty() + student.getLoyalty();
-        if (student1Points > student2Points) {
-            System.out.println(this.getStudentName() + " лучший Пуффендуец чем " + student.getStudentName());
-        } else if (student1Points < student2Points) {
-            System.out.println(student.getStudentName() + " лучший Пуффендуец чем " + this.getStudentName());
-        } else {
-            System.out.println(this.getStudentName() + " и " + student.getStudentName() + " равны по баллам");
+    @Override
+    public void compareAttributes(Hogwarts student) {
+        if (student instanceof Hufflepuff) {
+            int student1Points = this.getHardWork() + this.getHonesty() + this.getLoyalty();
+            int student2Points = ((Hufflepuff) student).getHardWork() + ((Hufflepuff) student).getHonesty() + ((Hufflepuff) student).getLoyalty();
+            if (student1Points > student2Points) {
+                System.out.println(this.getStudentName() + " лучший Пуффендуец чем " + student.getStudentName());
+            } else if (student1Points < student2Points) {
+                System.out.println(student.getStudentName() + " лучший Пуффендуец чем " + this.getStudentName());
+            } else {
+                System.out.println(this.getStudentName() + " и " + student.getStudentName() + " равны по баллам");
+            }
         }
     }
 }

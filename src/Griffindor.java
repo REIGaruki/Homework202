@@ -41,16 +41,19 @@ public class Griffindor extends Hogwarts{
                 "\nЧесть: " + honor + " баллов" +
                 "\nХрабрость: " + bravery + " баллов";
     }
+
     @Override
-    public void compareAttributes(Griffindor student) {
+    public void compareAttributes(Hogwarts student) {
+        if (student instanceof Griffindor) {
         int student1Points = this.getHonor() + this.getBravery() + this.getNobility();
-        int student2Points = student.getHonor() + student.getBravery() + student.getNobility();
-        if (student1Points > student2Points) {
-            System.out.println(this.getStudentName() + " лучший Гриффиндорец чем " + student.getStudentName());
-        } else if (student1Points < student2Points) {
-            System.out.println(student.getStudentName() + " лучший Гриффиндорец чем " + this.getStudentName());
-        } else {
-            System.out.println(this.getStudentName() + " и " + student.getStudentName() + " равны по баллам");
+            int student2Points = ((Griffindor) student).getHonor() + ((Griffindor) student).getBravery() + ((Griffindor) student).getNobility();
+            if (student1Points > student2Points) {
+                System.out.println(this.getStudentName() + " лучший Гриффиндорец чем " + student.getStudentName());
+            } else if (student1Points < student2Points) {
+                System.out.println(student.getStudentName() + " лучший Гриффиндорец чем " + this.getStudentName());
+            } else {
+                System.out.println(this.getStudentName() + " и " + student.getStudentName() + " равны по баллам");
+            }
         }
     }
 

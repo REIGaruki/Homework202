@@ -17,13 +17,16 @@ public class Main {
         for (Hogwarts student: students) {
             System.out.println(student);
         }
-        Griffindor s1 =  new Griffindor("Гарри Поттер", 55, 91, 90, 80, 80);
-        Slytherin s2 = new Slytherin("Драко Малфой", 77, 69, 60, 70, 100, 60, 90);
-        Slytherin s3 =  new Slytherin("Грегори Гойл", 49, 64, 50, 50, 60, 40, 80);
-
-        s1.compareAttributes(s2);
-        s2.compareAttributes(s3);
-        students[4].compareGrades(students[8]);
+        for (int i = 0; i < students.length; i++) {
+            for (int j = i + 1; j < students.length; j++) {
+                students[i].compareAttributes(students[j]);
+            }
+        }
+        for (int i = 0; i < students.length; i++) {
+            for (int j = i + 1; j < students.length; j++) {
+                students[i].compareGrades(students[j]);
+            }
+        }
     }
 
 

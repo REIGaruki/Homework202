@@ -45,25 +45,9 @@ public abstract class Hogwarts implements ComparePoints {
         if (student1Points > student2Points) {
             System.out.println(this.getStudentName() + " обладает большей магической мощностью чем " + student.getStudentName());
         } else if (student1Points < student2Points) {
-            System.out.println(student.getStudentName() + " обладает большей магической мощностью чем " + this.getStudentName());
+            System.out.println(this.getStudentName() + " обладает меньшей магической мощностью чем " + student.getStudentName());
         } else {
             System.out.println(this.getStudentName() + " и " + student.getStudentName() + " равны по баллам");
         }
-    }
-    @Override
-    public void compareAttributes(Slytherin student) {
-        System.out.println("Разные факультеты");
-    }
-    @Override
-    public void compareAttributes(Hufflepuff student) {
-        System.out.println("Разные факультеты");
-    }
-    @Override
-    public void compareAttributes(Ravenclaw student) {
-        System.out.println("Разные факультеты");
-    }
-    @Override
-    public void compareAttributes(Griffindor student) {
-        System.out.println("Разные факультеты");
     }
 }

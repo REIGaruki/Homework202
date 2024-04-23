@@ -63,15 +63,18 @@ public class Slytherin extends Hogwarts{
                 "\nНаходчивость: " + resource + " баллов" +
                 "\nЖажда власти: " + powerLust + " баллов";
     }
-    public void compareAttributes(Slytherin student) {
-        int student1Points = this.getAmbition() + this.getCunning() + this.getDetermination() + this.getPowerLust() + this.getResource();
-        int student2Points = student.getAmbition() + student.getCunning() + student.getDetermination() + student.getPowerLust() + student.getResource();
-        if (student1Points > student2Points) {
-            System.out.println(this.getStudentName() + " лучший Слизеринец чем " + student.getStudentName());
-        } else if (student1Points < student2Points) {
-            System.out.println(student.getStudentName() + " лучший Слизеринец чем " + this.getStudentName());
-        } else {
-            System.out.println(this.getStudentName() + " и " + student.getStudentName() + " равны по баллам");
+    @Override
+    public void compareAttributes(Hogwarts student) {
+        if (student instanceof Slytherin) {
+            int student1Points = this.getAmbition() + this.getCunning() + this.getDetermination() + this.getPowerLust() + this.getResource();
+            int student2Points = ((Slytherin) student).getAmbition() + ((Slytherin) student).getCunning() + ((Slytherin) student).getDetermination() + ((Slytherin) student).getPowerLust() + ((Slytherin) student).getResource();
+            if (student1Points > student2Points) {
+                System.out.println(this.getStudentName() + " лучший Слизеринец чем " + student.getStudentName());
+            } else if (student1Points < student2Points) {
+                System.out.println(student.getStudentName() + " лучший Слизеринец чем " + this.getStudentName());
+            } else {
+                System.out.println(this.getStudentName() + " и " + student.getStudentName() + " равны по баллам");
+            }
         }
 
     }
